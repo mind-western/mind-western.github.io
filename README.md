@@ -52,3 +52,56 @@ Similar to people, `posts` (found under `software/_posts`) are used to create an
 ### `publications`
 
 A Jupyter notebook is used to grab all publications. GitHub Actions is used to automate this process. This is updated monthly, and is currently set to display the 3 most recent articles. A full list of publications found is stored in a spreadsheet found in `_data/publications/publications.csv`.
+
+## Media Assets and Dimension Guidelines
+
+The website now supports background videos and large visual content to enhance the user experience. All media assets should be optimized for web delivery and include appropriate fallbacks for accessibility.
+
+### Background Video
+- **Location**: `/assets/video/`
+- **Filename**: `background-hero.mp4` (with optional `background-hero.webm` for better compression)
+- **Dimensions**: **1920×1080** (Full HD)
+- **Duration**: 10-30 seconds (will loop automatically)
+- **Requirements**: Auto-play, muted, looped
+- **Fallback**: `hero-background.svg` or `hero-background.jpg` (same dimensions)
+- **Usage**: Homepage hero section background
+
+### Banner/Hero Visuals
+- **Location**: `/assets/placeholders/` or `/assets/images/banners/`
+- **Dimensions**: **1280×720** (HD 720p landscape)
+- **Format**: JPEG (optimized, 80-90% quality) or PNG
+- **Alt format**: WebP for better compression
+- **Usage**: Section headers, feature highlights, call-to-action areas
+
+### Section Visuals
+- **Location**: `/assets/placeholders/` or `/assets/images/sections/`
+- **Dimensions**: **800×600** (flexible 4:3 aspect ratio)
+- **Format**: JPEG (optimized) or PNG
+- **Usage**: Research highlights, technology showcases, content illustrations
+
+### Inline Videos
+- **Location**: `/assets/video/`
+- **Dimensions**: **1280×720** (HD 720p landscape)
+- **Format**: MP4 (H.264 codec) with optional WebM
+- **Requirements**: Include poster image (same dimensions)
+- **Usage**: Embedded demonstration videos, research overviews
+
+### Implementation Notes
+- **Accessibility**: All visuals must include descriptive alt text
+- **Performance**: Images should be compressed and optimized for web
+- **Responsive**: All media adapts to different screen sizes
+- **Fallbacks**: Provide static image fallbacks for videos
+- **File Management**: Placeholder assets are clearly marked with TODO comments in code
+
+### Replacing Placeholder Assets
+1. **Video Assets**: Replace placeholder SVGs with actual MP4/WebM files in `/assets/video/`
+2. **Image Assets**: Replace SVG placeholders with optimized JPEG/PNG files
+3. **Code Comments**: Search for "TODO:" comments in HTML/CSS files for specific replacement instructions
+4. **Alt Text**: Update alt attributes with descriptive text for actual content
+5. **Testing**: Verify responsive behavior across different devices and browsers
+
+### Current Placeholder Locations
+- Background video: `index.html` - Hero video section (commented out, using SVG fallback)
+- Banner images: `index.html` - Banner section
+- Section visuals: `index.html` - Research highlights and technology sections
+- All placeholders are in `/assets/placeholders/` with descriptive SVG graphics

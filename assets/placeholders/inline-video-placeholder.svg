@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="videogradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#videogradient)"/>
+  
+  <!-- Play button circle -->
+  <circle cx="640" cy="360" r="80" fill="rgba(255,255,255,0.9)" stroke="rgba(255,255,255,0.7)" stroke-width="4"/>
+  <polygon points="600,320 600,400 700,360" fill="#1a1a2e"/>
+  
+  <text x="640" y="270" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle">VIDEO PLACEHOLDER</text>
+  <text x="640" y="480" font-family="Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.8)" text-anchor="middle">1280×720 - Replace with actual video content</text>
+  <text x="640" y="510" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.6)" text-anchor="middle">Seminars • Research highlights • Demonstrations</text>
+</svg>

@@ -9,3 +9,6 @@ vendor/
 # Working documents for photo search
 PHOTO_SEARCH_GUIDE.md
 find_photos.sh
+
+# Test files
+test-homepage.html

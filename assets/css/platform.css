@@ -1,5 +1,57 @@
 /* Platform Page Styles */
 
+/*
+  PLATFORM HERO VISUAL SECTION
+  Large banner with overlay for platform overview
+*/
+.platform-hero-visual {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  border-radius: 0 0 16px 16px;
+}
+
+.hero-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.hero-banner-overlay h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  line-height: 1.2;
+}
+
+.hero-banner-overlay p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  opacity: 0.95;
+  max-width: 800px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
 .platform-section {
   margin-bottom: 4rem;
   padding: 2rem 0;
@@ -148,6 +200,20 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Platform hero visual mobile adjustments */
+  .platform-hero-visual {
+    height: 50vh;
+    min-height: 300px;
+  }
+  
+  .hero-banner-overlay h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-banner-overlay p {
+    font-size: 1.1rem;
+  }
+  
   .slide-content {
     flex-direction: column;
   }
@@ -166,6 +232,22 @@
   
   .equipment-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet responsive styles */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .platform-hero-visual {
+    height: 55vh;
+    min-height: 350px;
+  }
+  
+  .hero-banner-overlay h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-banner-overlay p {
+    font-size: 1.25rem;
   }
 }
 

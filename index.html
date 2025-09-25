@@ -8,19 +8,43 @@ style: /assets/css/index.css
 <!-- Grab associated files -->
 {% assign funding = site.data.index.funding %}
 
-<div class="row">
-  <div class="text-center">
-    <img id="mr-lightsheet" src="/assets/images/index/mr_lightsheet.png" alt="Brain images captured by 15.2 Tesla MRI (left) and light sheet microscopy (right)" />
+<!-- 
+  BACKGROUND VIDEO SECTION
+  TODO: Replace placeholder with actual background-hero.mp4 video (1920x1080)
+  Video should be 10-30 seconds, looped, showcasing brain research technology
+-->
+<div class="hero-video-container">
+  <video class="hero-background-video" autoplay muted loop playsinline poster="/assets/placeholders/hero-background.svg">
+    <!-- TODO: Add actual video source when available -->
+    <!-- <source src="/assets/video/background-hero.mp4" type="video/mp4"> -->
+    <!-- <source src="/assets/video/background-hero.webm" type="video/webm"> -->
+    <img src="/assets/placeholders/hero-background.svg" alt="Brain research visualization - MRI and microscopy technology" />
+  </video>
+  
+  <!-- Semi-transparent overlay for text readability -->
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <div class="text-center">
+        <img id="mr-lightsheet" src="/assets/images/index/mr_lightsheet.png" alt="Brain images captured by 15.2 Tesla MRI (left) and light sheet microscopy (right)" />
+      </div>
+      <div class="text-center hero-title-section">
+        <h1 class="platform-title">Mesoscopic Integrated Neuroimaging Data (MIND) Platform</h1>
+      </div>
+    </div>
   </div>
 </div>
-<br/>
 
-<div class="row">
-  <div class="text-center">
-    <h1 class="platform-title">Mesoscopic Integrated Neuroimaging Data (MIND) Platform</h1>
+<!-- Large Banner Visual Section -->
+<!-- TODO: Replace with actual banner image/video (1280x720) -->
+<div class="banner-section">
+  <div class="banner-visual">
+    <img src="/assets/placeholders/hero-banner.svg" alt="MIND Platform research capabilities and technology showcase" class="banner-image" />
+    <div class="banner-overlay">
+      <h2>Revolutionizing Brain Research</h2>
+      <p>Combining Canada's most powerful MRI with cutting-edge microscopy</p>
+    </div>
   </div>
 </div>
-<br/>
 
 <div class="row">
   <h2>About</h2>
@@ -28,6 +52,28 @@ style: /assets/css/index.css
   <p>
     The MIND Platform revolutionizes brain research by combining Canada's most powerful MRI scanner with cutting-edge microscopy technology. We capture incredibly detailed images of the brain at both large and small scales, helping scientists understand brain diseases like Alzheimer's and Parkinson's to develop better treatments. Our open science approach makes this powerful technology accessible to researchers worldwide.
   </p>
+</div>
+
+<!-- Research Highlights Section with Large Visual -->
+<!-- TODO: Replace with actual research visualization (800x600) -->
+<div class="research-highlights-section">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="section-visual-container">
+        <img src="/assets/placeholders/section-visual.svg" alt="Advanced neuroimaging research capabilities and scientific discoveries" class="section-visual" />
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <h2>Research Excellence</h2>
+      <p>Our integrated approach combines multiple imaging modalities to provide unprecedented insights into brain structure and function. From macro-scale anatomical features to cellular-level detail, we bridge scales to advance neuroscience research.</p>
+      <ul>
+        <li>15.2 Tesla ultra-high-field MRI imaging</li>
+        <li>Advanced light sheet microscopy</li>
+        <li>Multi-scale data integration</li>
+        <li>Open science data sharing</li>
+      </ul>
+    </div>
+  </div>
 </div>
 <br />
 
@@ -38,7 +84,18 @@ style: /assets/css/index.css
     {% include index/news.html %}
   </div>
 
-
+  <!-- Equipment Showcase Section -->
+  <!-- TODO: Replace with actual equipment showcase visual/video (800x600 or 1280x720) -->
+  <div class="col-lg-6 col-sm-6">
+    <h2>Technology</h2>
+    <hr />
+    <div class="technology-showcase">
+      <img src="/assets/placeholders/section-visual.svg" alt="State-of-the-art neuroimaging equipment and research facilities" class="technology-visual" />
+      <p class="technology-description">
+        Explore our cutting-edge facilities featuring Canada's most powerful research MRI scanner and advanced microscopy systems.
+      </p>
+    </div>
+  </div>
 </div>
 <br />
 
