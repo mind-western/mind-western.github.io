@@ -216,7 +216,7 @@
 
 .platform-title {
   font-family: "Lato", sans-serif;
-  color: rgb(0, 0, 80);
+  color: #ffffff; /* White text for dark theme */
   font-size: 32px;
   font-weight: 700;
   letter-spacing: 0.15vw;

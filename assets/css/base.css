@@ -148,7 +148,7 @@ video::-webkit-media-controls-panel {
 }
 
 .navbar-nav .nav-link {
-  color: rgb(0, 0, 80) !important;
+  color: #e0e0e0 !important; /* Light text for dark theme */
   font-weight: 500;
   padding: 0.5rem 0.75rem !important; /* Reduced horizontal padding */
   transition: color 0.3s ease;
@@ -234,7 +234,7 @@ video::-webkit-media-controls-panel {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgb(0, 0, 80);
+  color: #e0e0e0; /* Light text for dark theme */
 }
 
 .nav-link {
@@ -250,7 +250,7 @@ video::-webkit-media-controls-panel {
 .footer {
   width: 100vw;
   margin-top: 1vh;
-  background-color: rgb(0, 0, 80);
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); /* Dark scientific gradient */
   color: rgb(160, 160, 160);
   text-align: center;
   font-size: 10px;
@@ -270,7 +270,7 @@ video::-webkit-media-controls-panel {
 
 h2 {
   font-family: "Lato", sans-serif;
-  color: rgb(0, 0, 80);
+  color: #ffffff; /* White text for dark theme headers */
   font-size: 18px;
   letter-spacing: 0.2vw;
   text-decoration: none;
@@ -278,18 +278,19 @@ h2 {
 }
 
 a {
-  color: rgb(0, 0, 80);
+  color: #06B6D4; /* Scientific cyan for links */
 }
 
 a:hover {
-  color: rgb(0, 0, 80);
+  color: #A855F7; /* Scientific purple on hover */
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
 .media-heading,
 .pub-link {
-  background-color: rgb(240, 240, 240);
+  background-color: rgba(26, 26, 26, 0.8); /* Dark background for headings */
+  color: #ffffff !important; /* White text */
   font-size: 14px;
   border: none;
   text-decoration: underline;
@@ -298,6 +299,7 @@ a:hover {
 .media-heading:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
+  color: #A855F7 !important; /* Scientific purple on hover */
 }
 
 .info {
@@ -447,7 +449,7 @@ a:hover {
 
   .fas,
   .fab {
-    color: rgb(0, 0, 80);
+    color: #ffffff; /* White text for dark theme on large screens */
   }
 
   .fas:hover,
@@ -488,4 +490,75 @@ a:hover {
     font-size: 0.85rem;
     padding: 0.5rem 0.25rem !important;
   }
+}
+
+/* Bootstrap Modal Dark Theme Overrides */
+.modal-content {
+  background: rgba(26, 26, 26, 0.95) !important; /* Dark background for modals */
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #e0e0e0 !important;
+}
+
+.modal-header {
+  background: rgba(26, 26, 26, 0.95) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.modal-body {
+  background: rgba(26, 26, 26, 0.95) !important;
+  color: #e0e0e0 !important;
+}
+
+.modal-title {
+  color: #ffffff !important;
+}
+
+.modal-header .close {
+  color: #ffffff !important;
+  opacity: 0.8;
+}
+
+.modal-header .close:hover {
+  color: #A855F7 !important; /* Scientific purple on hover */
+  opacity: 1;
+}
+
+/* Additional text styling for modal content */
+.modal-content h1, 
+.modal-content h2, 
+.modal-content h3, 
+.modal-content h4, 
+.modal-content h5, 
+.modal-content h6 {
+  color: #ffffff !important;
+}
+
+.modal-content p {
+  color: #e0e0e0 !important;
+}
+
+.modal-content .media-heading {
+  color: #ffffff !important;
+}
+
+/* Global dark theme text overrides */
+body, p, span, div, li, td, th, strong, em, i, b {
+  color: #e0e0e0 !important;
+}
+
+/* Ensure all headings are white */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+}
+
+/* Media and card content styling */
+.media, .card, .card-body {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #e0e0e0 !important;
+}
+
+/* List styling for dark theme */
+ul, ol {
+  color: #e0e0e0 !important;
 }
