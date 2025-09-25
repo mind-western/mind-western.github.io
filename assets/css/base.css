@@ -59,7 +59,6 @@ video {
   height: 0;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   overflow: hidden;
-  border-radius: 8px;
 }
 
 .video-container video {
@@ -85,7 +84,6 @@ video::-webkit-media-controls-panel {
   color: white;
   text-align: center;
   padding: 2rem;
-  border-radius: 8px;
 }
 
 /* Accessibility: Reduce motion for users who prefer it */
@@ -187,7 +185,6 @@ video::-webkit-media-controls-panel {
   position: absolute;
   height: 3px;
   width: 100%;
-  border-radius: 9px;
   opacity: 1;
   left: 0;
   transform: rotate(0deg);

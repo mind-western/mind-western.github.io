@@ -55,8 +55,7 @@
 .hero-content #mr-lightsheet {
   filter: brightness(1.2) contrast(1.4); /* Enhanced contrast for dark background */
   box-shadow: 0 12px 48px rgba(139, 92, 246, 0.3); /* Purple glow matching scientific theme */
-  border-radius: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  border: 2px solid rgba(255, 255, 255, 0.1); /* Subtle border - straight edges */
 }
 
 /* 
@@ -73,7 +72,6 @@
   width: 100%;
   height: 400px;
   overflow: hidden;
-  border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
@@ -92,7 +90,6 @@
   color: white;
   padding: 2rem;
   text-align: center;
-  border-radius: 0 0 12px 12px;
 }
 
 .banner-overlay h2 {
@@ -119,7 +116,6 @@
   margin: 4rem 0;
   padding: 3rem 0;
   background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%); /* Dark scientific background */
-  border-radius: 16px;
   color: white;
 }
 
@@ -131,7 +127,6 @@
 .section-visual {
   width: 100%;
   height: auto;
-  border-radius: 12px;
   box-shadow: 0 8px 32px rgba(139, 92, 246, 0.2); /* Scientific purple glow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -175,7 +170,6 @@
   text-align: center;
   background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
   padding: 2rem;
-  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -184,7 +178,6 @@
   height: auto;
   max-height: 250px;
   object-fit: cover;
-  border-radius: 8px;
   box-shadow: 0 6px 24px rgba(6, 182, 212, 0.2); /* Cyan scientific glow */
   margin-bottom: 1rem;
   border: 1px solid rgba(6, 182, 212, 0.3);

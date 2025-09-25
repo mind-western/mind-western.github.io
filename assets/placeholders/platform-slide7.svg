@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="800" height="600" fill="url(#bg7)"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="300">PATHO-CONNECTOMICS</text>
+  <text x="400" y="75" font-family="Arial, sans-serif" font-size="16" fill="#CCCCCC" text-anchor="middle">Linking Functional Networks with Molecular Pathology</text>
+  
+  <!-- Left side: rs-fMRI network -->
+  <g transform="translate(150, 150)">
+    <text x="100" y="20" font-family="Arial, sans-serif" font-size="16" fill="#06B6D4" text-anchor="middle">rs-fMRI Networks</text>
+    
+    <!-- Brain outline -->
+    <ellipse cx="100" cy="120" rx="80" ry="60" fill="none" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Network nodes -->
+    <g filter="url(#glow)">
+      <circle cx="60" cy="100" r="8" fill="#06B6D4" opacity="0.9"/>
+      <circle cx="140" cy="100" r="8" fill="#06B6D4" opacity="0.9"/>
+      <circle cx="80" cy="140" r="6" fill="#0891B2" opacity="0.8"/>
+      <circle cx="120" cy="140" r="6" fill="#0891B2" opacity="0.8"/>
+      <circle cx="100" cy="80" r="10" fill="#67E8F9" opacity="0.7"/>
+      <circle cx="100" cy="160" r="7" fill="#22D3EE" opacity="0.8"/>
+      
+      <!-- Network connections -->
+      <path d="M60,100 Q100,60 140,100" fill="none" stroke="#06B6D4" stroke-width="3" opacity="0.6"/>
+      <path d="M60,100 Q80,120 80,140" fill="none" stroke="#0891B2" stroke-width="2" opacity="0.5"/>
+      <path d="M140,100 Q120,120 120,140" fill="none" stroke="#0891B2" stroke-width="2" opacity="0.5"/>
+      <path d="M80,140 Q90,150 100,160" fill="none" stroke="#22D3EE" stroke-width="2" opacity="0.4"/>
+      <path d="M120,140 Q110,150 100,160" fill="none" stroke="#22D3EE" stroke-width="2" opacity="0.4"/>
+      <path d="M100,80 Q80,90 60,100" fill="none" stroke="#67E8F9" stroke-width="2" opacity="0.5"/>
+      <path d="M100,80 Q120,90 140,100" fill="none" stroke="#67E8F9" stroke-width="2" opacity="0.5"/>
+    </g>
+    
+    <text x="100" y="210" font-family="Arial, sans-serif" font-size="12" fill="#06B6D4" text-anchor="middle">Connectivity Patterns</text>
+  </g>
+  
+  <!-- Integration symbol -->
+  <g transform="translate(400, 280)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="20" fill="#8B5CF6" text-anchor="middle">⊕</text>
+    <text x="0" y="-25" font-family="Arial, sans-serif" font-size="12" fill="#8B5CF6" text-anchor="middle">INTEGRATE</text>
+  </g>
+  
+  <!-- Right side: Pathology mapping -->
+  <g transform="translate(500, 150)">
+    <text x="100" y="20" font-family="Arial, sans-serif" font-size="16" fill="#A855F7" text-anchor="middle">α-Synuclein Pathology</text>
+    
+    <!-- Brain outline -->
+    <ellipse cx="100" cy="120" rx="80" ry="60" fill="none" stroke="#A855F7" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Pathology deposits -->
+    <g filter="url(#glow)">
+      <circle cx="70" cy="100" r="12" fill="#A855F7" opacity="0.8"/>
+      <circle cx="130" cy="110" r="8" fill="#8B5CF6" opacity="0.9"/>
+      <circle cx="90" cy="140" r="10" fill="#7C3AED" opacity="0.8"/>
+      <circle cx="110" cy="130" r="6" fill="#6D28D9" opacity="0.9"/>
+      <circle cx="100" cy="85" r="7" fill="#C084FC" opacity="0.7"/>
+      
+      <!-- Pathology spread -->
+      <path d="M70,100 Q85,90 100,85" fill="none" stroke="#A855F7" stroke-width="2" opacity="0.5" stroke-dasharray="3,3"/>
+      <path d="M100,85 Q115,97 130,110" fill="none" stroke="#8B5CF6" stroke-width="2" opacity="0.5" stroke-dasharray="3,3"/>
+      <path d="M130,110 Q120,120 110,130" fill="none" stroke="#7C3AED" stroke-width="2" opacity="0.5" stroke-dasharray="3,3"/>
+      <path d="M110,130 Q100,135 90,140" fill="none" stroke="#6D28D9" stroke-width="2" opacity="0.5" stroke-dasharray="3,3"/>
+    </g>
+    
+    <text x="100" y="210" font-family="Arial, sans-serif" font-size="12" fill="#A855F7" text-anchor="middle">Molecular Distribution</text>
+  </g>
+  
+  <!-- Bottom integrated view -->
+  <g transform="translate(400, 400)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">INTEGRATED ANALYSIS</text>
+    
+    <!-- Combined brain visualization -->
+    <ellipse cx="0" cy="40" rx="100" ry="60" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.8"/>
+    
+    <!-- Network disruption -->
+    <g filter="url(#glow)">
+      <circle cx="-40" cy="25" r="6" fill="#06B6D4" opacity="0.6"/>
+      <circle cx="40" cy="25" r="6" fill="#06B6D4" opacity="0.6"/>
+      <circle cx="0" cy="55" r="8" fill="#EF4444" opacity="0.9"/>
+      
+      <!-- Disrupted connection -->
+      <path d="M-40,25 Q0,10 40,25" fill="none" stroke="#EF4444" stroke-width="3" opacity="0.7" stroke-dasharray="5,5"/>
+      <path d="M-40,25 Q-20,40 0,55" fill="none" stroke="#A855F7" stroke-width="2" opacity="0.6"/>
+      <path d="M40,25 Q20,40 0,55" fill="none" stroke="#A855F7" stroke-width="2" opacity="0.6"/>
+    </g>
+    
+    <text x="-80" y="130" font-family="Arial, sans-serif" font-size="10" fill="#06B6D4" text-anchor="middle">Network</text>
+    <text x="-80" y="140" font-family="Arial, sans-serif" font-size="10" fill="#06B6D4" text-anchor="middle">Integrity</text>
+    
+    <text x="80" y="130" font-family="Arial, sans-serif" font-size="10" fill="#A855F7" text-anchor="middle">Pathology</text>
+    <text x="80" y="140" font-family="Arial, sans-serif" font-size="10" fill="#A855F7" text-anchor="middle">Burden</text>
+  </g>
+  
+  <!-- Bottom info -->
+  <text x="400" y="580" font-family="Arial, sans-serif" font-size="12" fill="#666666" text-anchor="middle">Placeholder: assets/images/platform/Slide7.png (800×600)</text>
+</svg>

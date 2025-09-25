@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="800" height="600" fill="url(#bg4)"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="300">DATA PROCESSING PIPELINE</text>
+  <text x="400" y="75" font-family="Arial, sans-serif" font-size="16" fill="#CCCCCC" text-anchor="middle">Automated Light Sheet Analysis</text>
+  
+  <!-- Pipeline flow -->
+  <g transform="translate(100, 120)">
+    <!-- Step 1: Raw Data -->
+    <rect x="0" y="0" width="120" height="60" fill="#1a1a1a" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="60" y="25" font-family="Arial, sans-serif" font-size="12" fill="#8B5CF6" text-anchor="middle">RAW DATA</text>
+    <text x="60" y="40" font-family="Arial, sans-serif" font-size="10" fill="#CCCCCC" text-anchor="middle">Light Sheet</text>
+    <text x="60" y="52" font-family="Arial, sans-serif" font-size="10" fill="#CCCCCC" text-anchor="middle">Microscopy</text>
+    
+    <!-- Arrow 1 -->
+    <path d="M130,30 L170,30 L160,20 M170,30 L160,40" fill="none" stroke="#06B6D4" stroke-width="2"/>
+    
+    <!-- Step 2: Registration -->
+    <rect x="180" y="0" width="120" height="60" fill="#1a1a1a" stroke="#06B6D4" stroke-width="2"/>
+    <text x="240" y="25" font-family="Arial, sans-serif" font-size="12" fill="#06B6D4" text-anchor="middle">REGISTRATION</text>
+    <text x="240" y="40" font-family="Arial, sans-serif" font-size="10" fill="#CCCCCC" text-anchor="middle">Atlas Alignment</text>
+    
+    <!-- Arrow 2 -->
+    <path d="M310,30 L350,30 L340,20 M350,30 L340,40" fill="none" stroke="#10B981" stroke-width="2"/>
+    
+    <!-- Step 3: Segmentation -->
+    <rect x="360" y="0" width="120" height="60" fill="#1a1a1a" stroke="#10B981" stroke-width="2"/>
+    <text x="420" y="25" font-family="Arial, sans-serif" font-size="12" fill="#10B981" text-anchor="middle">SEGMENTATION</text>
+    <text x="420" y="40" font-family="Arial, sans-serif" font-size="10" fill="#CCCCCC" text-anchor="middle">Structure ID</text>
+    
+    <!-- Arrow 3 -->
+    <path d="M490,30 L530,30 L520,20 M530,30 L520,40" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    
+    <!-- Step 4: Quantification -->
+    <rect x="540" y="0" width="120" height="60" fill="#1a1a1a" stroke="#F59E0B" stroke-width="2"/>
+    <text x="600" y="25" font-family="Arial, sans-serif" font-size="12" fill="#F59E0B" text-anchor="middle">QUANTIFICATION</text>
+    <text x="600" y="40" font-family="Arial, sans-serif" font-size="10" fill="#CCCCCC" text-anchor="middle">Pathology Maps</text>
+  </g>
+  
+  <!-- Visual representation of brain processing -->
+  <g transform="translate(150, 220)">
+    <!-- Original brain -->
+    <ellipse cx="60" cy="60" rx="40" ry="50" fill="none" stroke="#8B5CF6" stroke-width="2" opacity="0.6"/>
+    <g filter="url(#glow)">
+      <circle cx="40" cy="40" r="3" fill="#8B5CF6" opacity="0.8"/>
+      <circle cx="80" cy="45" r="4" fill="#A855F7" opacity="0.7"/>
+      <circle cx="60" cy="70" r="2" fill="#7C3AED" opacity="0.9"/>
+    </g>
+    <text x="60" y="130" font-family="Arial, sans-serif" font-size="10" fill="#8B5CF6" text-anchor="middle">Raw Volume</text>
+    
+    <!-- Arrow -->
+    <path d="M120,60 L180,60 L170,50 M180,60 L170,70" fill="none" stroke="#CCCCCC" stroke-width="2"/>
+    
+    <!-- Processed brain -->
+    <ellipse cx="240" cy="60" rx="40" ry="50" fill="none" stroke="#10B981" stroke-width="2"/>
+    <!-- Grid overlay -->
+    <g stroke="#06B6D4" stroke-width="0.5" opacity="0.6">
+      <line x1="200" y1="30" x2="280" y2="30"/>
+      <line x1="200" y1="50" x2="280" y2="50"/>
+      <line x1="200" y1="70" x2="280" y2="70"/>
+      <line x1="200" y1="90" x2="280" y2="90"/>
+      <line x1="220" y1="10" x2="220" y2="110"/>
+      <line x1="240" y1="10" x2="240" y2="110"/>
+      <line x1="260" y1="10" x2="260" y2="110"/>
+    </g>
+    <text x="240" y="130" font-family="Arial, sans-serif" font-size="10" fill="#10B981" text-anchor="middle">Quantified Data</text>
+    
+    <!-- Arrow -->
+    <path d="M280,60 L340,60 L330,50 M340,60 L330,70" fill="none" stroke="#CCCCCC" stroke-width="2"/>
+    
+    <!-- Statistical map -->
+    <rect x="360" y="10" width="80" height="100" fill="#1a1a1a" stroke="#F59E0B" stroke-width="2"/>
+    <!-- Heat map simulation -->
+    <rect x="370" y="20" width="60" height="80" fill="#F59E0B" opacity="0.3"/>
+    <rect x="380" y="30" width="40" height="60" fill="#EF4444" opacity="0.4"/>
+    <rect x="390" y="40" width="20" height="40" fill="#DC2626" opacity="0.5"/>
+    <text x="400" y="130" font-family="Arial, sans-serif" font-size="10" fill="#F59E0B" text-anchor="middle">Statistical Map</text>
+  </g>
+  
+  <!-- Tools section -->
+  <g transform="translate(400, 380)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">PIPELINE TOOLS</text>
+    <text x="-150" y="30" font-family="Arial, sans-serif" font-size="12" fill="#8B5CF6" text-anchor="middle">SPIMquant</text>
+    <text x="-50" y="30" font-family="Arial, sans-serif" font-size="12" fill="#06B6D4" text-anchor="middle">zarrnii</text>
+    <text x="50" y="30" font-family="Arial, sans-serif" font-size="12" fill="#10B981" text-anchor="middle">Custom Tools</text>
+    <text x="150" y="30" font-family="Arial, sans-serif" font-size="12" fill="#F59E0B" text-anchor="middle">Statistical Maps</text>
+    
+    <text x="0" y="60" font-family="Arial, sans-serif" font-size="12" fill="#CCCCCC" text-anchor="middle">High-throughput • Reproducible • Automated</text>
+  </g>
+  
+  <!-- Bottom info -->
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="12" fill="#666666" text-anchor="middle">Placeholder: assets/images/platform/Slide4.png (800×600)</text>
+</svg>

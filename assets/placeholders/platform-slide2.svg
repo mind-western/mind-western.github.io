@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="300">15.2T vs 9.4T MRI COMPARISON</text>
+  <text x="400" y="75" font-family="Arial, sans-serif" font-size="16" fill="#CCCCCC" text-anchor="middle">Enhanced Resolution and Contrast</text>
+  
+  <!-- Left brain (9.4T) -->
+  <g transform="translate(150, 200)">
+    <text x="75" y="30" font-family="Arial, sans-serif" font-size="18" fill="#888888" text-anchor="middle">9.4T MRI</text>
+    <rect x="0" y="50" width="150" height="200" fill="none" stroke="#888888" stroke-width="2"/>
+    
+    <!-- Lower resolution brain -->
+    <ellipse cx="75" cy="150" rx="50" ry="60" fill="none" stroke="#AAAAAA" stroke-width="2" opacity="0.6"/>
+    <ellipse cx="75" cy="150" rx="30" ry="40" fill="none" stroke="#999999" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Blurrier details -->
+    <circle cx="60" cy="130" r="6" fill="#CCCCCC" opacity="0.4"/>
+    <circle cx="90" cy="130" r="6" fill="#CCCCCC" opacity="0.4"/>
+    <ellipse cx="75" cy="170" rx="15" ry="8" fill="#BBBBBB" opacity="0.4"/>
+    
+    <text x="75" y="280" font-family="Arial, sans-serif" font-size="12" fill="#888888" text-anchor="middle">Standard Resolution</text>
+    <text x="75" y="295" font-family="Arial, sans-serif" font-size="10" fill="#666666" text-anchor="middle">~150μm effective</text>
+  </g>
+  
+  <!-- VS indicator -->
+  <g transform="translate(400, 300)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" fill="#06B6D4" text-anchor="middle" font-weight="bold">VS</text>
+  </g>
+  
+  <!-- Right brain (15.2T) -->
+  <g transform="translate(500, 200)">
+    <text x="75" y="30" font-family="Arial, sans-serif" font-size="18" fill="#8B5CF6" text-anchor="middle">15.2T MRI</text>
+    <rect x="0" y="50" width="150" height="200" fill="none" stroke="#8B5CF6" stroke-width="2"/>
+    
+    <!-- Higher resolution brain -->
+    <ellipse cx="75" cy="150" rx="50" ry="60" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.9"/>
+    <ellipse cx="75" cy="150" rx="35" ry="45" fill="none" stroke="#EEEEEE" stroke-width="1.5" opacity="0.8"/>
+    <ellipse cx="75" cy="150" rx="20" ry="25" fill="none" stroke="#DDDDDD" stroke-width="1" opacity="0.7"/>
+    
+    <!-- Much sharper details -->
+    <circle cx="60" cy="130" r="4" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="90" cy="130" r="4" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="60" cy="130" r="2" fill="#8B5CF6" opacity="0.8"/>
+    <circle cx="90" cy="130" r="2" fill="#8B5CF6" opacity="0.8"/>
+    <ellipse cx="75" cy="170" rx="12" ry="6" fill="#EEEEEE" opacity="0.8"/>
+    
+    <!-- Additional fine structures -->
+    <path d="M50,140 Q75,145 100,140" fill="none" stroke="#CCCCCC" stroke-width="1" opacity="0.7"/>
+    <path d="M50,160 Q75,155 100,160" fill="none" stroke="#CCCCCC" stroke-width="1" opacity="0.7"/>
+    
+    <text x="75" y="280" font-family="Arial, sans-serif" font-size="12" fill="#8B5CF6" text-anchor="middle">Enhanced Resolution</text>
+    <text x="75" y="295" font-family="Arial, sans-serif" font-size="10" fill="#A855F7" text-anchor="middle">~100μm effective</text>
+  </g>
+  
+  <!-- Advantages list -->
+  <g transform="translate(400, 400)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">15.2T ADVANTAGES</text>
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#8B5CF6" text-anchor="middle">• 60% improved SNR</text>
+    <text x="0" y="40" font-family="Arial, sans-serif" font-size="12" fill="#A855F7" text-anchor="middle">• Sub-100μm resolution</text>
+    <text x="0" y="55" font-family="Arial, sans-serif" font-size="12" fill="#06B6D4" text-anchor="middle">• Enhanced contrast</text>
+    <text x="0" y="70" font-family="Arial, sans-serif" font-size="12" fill="#10B981" text-anchor="middle">• Superior pathology detection</text>
+  </g>
+  
+  <!-- Bottom info -->
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="12" fill="#666666" text-anchor="middle">Placeholder: assets/images/platform/Slide2.png (800×600)</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="equipBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="600" height="400" fill="url(#equipBg2)"/>
+  
+  <!-- SmartBatch system silhouette -->
+  <g transform="translate(300, 200)" stroke="#495057" stroke-width="2" fill="none">
+    <!-- Main clearing chamber -->
+    <rect x="-120" y="-60" width="240" height="120" fill="#6c757d" opacity="0.3"/>
+    
+    <!-- Sample containers -->
+    <circle cx="-60" cy="-20" r="15" fill="#06B6D4" opacity="0.4"/>
+    <circle cx="0" cy="-20" r="15" fill="#06B6D4" opacity="0.4"/>
+    <circle cx="60" cy="-20" r="15" fill="#06B6D4" opacity="0.4"/>
+    
+    <circle cx="-60" cy="20" r="15" fill="#10B981" opacity="0.4"/>
+    <circle cx="0" cy="20" r="15" fill="#10B981" opacity="0.4"/>
+    <circle cx="60" cy="20" r="15" fill="#10B981" opacity="0.4"/>
+    
+    <!-- Control unit -->
+    <rect x="-60" y="-100" width="120" height="30" fill="#495057" opacity="0.5"/>
+    
+    <!-- Liquid handling system -->
+    <rect x="-140" y="-40" width="20" height="80" fill="#495057" opacity="0.4"/>
+    <rect x="120" y="-40" width="20" height="80" fill="#495057" opacity="0.4"/>
+    
+    <!-- Tubes -->
+    <path d="M-120,-40 Q-100,-50 -80,-40" fill="none" stroke="#06B6D4" stroke-width="3"/>
+    <path d="M-120,0 Q-100,-10 -80,0" fill="none" stroke="#10B981" stroke-width="3"/>
+    <path d="M80,-40 Q100,-50 120,-40" fill="none" stroke="#06B6D4" stroke-width="3"/>
+    <path d="M80,0 Q100,-10 120,0" fill="none" stroke="#10B981" stroke-width="3"/>
+  </g>
+  
+  <!-- Labels and specs -->
+  <text x="300" y="50" font-family="Arial, sans-serif" font-size="24" fill="#495057" text-anchor="middle" font-weight="600">SMARTBATCH CLEARING</text>
+  <text x="300" y="75" font-family="Arial, sans-serif" font-size="16" fill="#6c757d" text-anchor="middle">LifeCanvas Technologies</text>
+  
+  <!-- Features -->
+  <g transform="translate(100, 320)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#495057">• Automated tissue clearing</text>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="14" fill="#495057">• Batch processing</text>
+    <text x="0" y="40" font-family="Arial, sans-serif" font-size="14" fill="#495057">• Preserved fluorescence</text>
+  </g>
+  
+  <g transform="translate(350, 320)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#495057">• Optimized protocols</text>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="14" fill="#495057">• Enhanced transparency</text>
+    <text x="0" y="40" font-family="Arial, sans-serif" font-size="14" fill="#495057">• Consistent results</text>
+  </g>
+  
+  <!-- Placeholder notice -->
+  <text x="300" y="380" font-family="Arial, sans-serif" font-size="12" fill="#6c757d" text-anchor="middle">Placeholder: assets/images/equipment/smartbatch-clearing.jpg</text>
+</svg>

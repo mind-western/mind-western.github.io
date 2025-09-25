@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="800" height="600" fill="url(#bg1)"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="300">MESO-SCALE BRAIN IMAGING</text>
+  <text x="400" y="75" font-family="Arial, sans-serif" font-size="16" fill="#CCCCCC" text-anchor="middle">Integration of MRI and Light Sheet Microscopy</text>
+  
+  <!-- Scale representation -->
+  <g transform="translate(100, 150)">
+    <!-- Macro scale (MRI) -->
+    <text x="150" y="30" font-family="Arial, sans-serif" font-size="18" fill="#8B5CF6" text-anchor="middle">MACRO SCALE</text>
+    <rect x="50" y="50" width="200" height="150" fill="none" stroke="#8B5CF6" stroke-width="2"/>
+    
+    <!-- Brain outline -->
+    <ellipse cx="150" cy="125" rx="60" ry="45" fill="none" stroke="#CCCCCC" stroke-width="1.5" opacity="0.8"/>
+    <ellipse cx="150" cy="125" rx="40" ry="30" fill="none" stroke="#AAAAAA" stroke-width="1" opacity="0.6"/>
+    
+    <text x="150" y="230" font-family="Arial, sans-serif" font-size="12" fill="#8B5CF6" text-anchor="middle">~100μm resolution</text>
+    <text x="150" y="245" font-family="Arial, sans-serif" font-size="10" fill="#888888" text-anchor="middle">Whole brain structure</text>
+  </g>
+  
+  <!-- Arrow -->
+  <g transform="translate(400, 250)">
+    <path d="M-30,0 L30,0 L20,-10 M30,0 L20,10" fill="none" stroke="#06B6D4" stroke-width="3"/>
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="14" fill="#06B6D4" text-anchor="middle">INTEGRATION</text>
+  </g>
+  
+  <!-- Micro scale (Light Sheet) -->
+  <g transform="translate(500, 150)">
+    <text x="100" y="30" font-family="Arial, sans-serif" font-size="18" fill="#10B981" text-anchor="middle">MICRO SCALE</text>
+    <rect x="0" y="50" width="200" height="150" fill="none" stroke="#10B981" stroke-width="2"/>
+    
+    <!-- Cellular details with fluorescence -->
+    <g filter="url(#glow)">
+      <circle cx="60" cy="100" r="8" fill="#8B5CF6" opacity="0.8"/>
+      <circle cx="140" cy="100" r="6" fill="#A855F7" opacity="0.9"/>
+      <circle cx="100" cy="130" r="10" fill="#06B6D4" opacity="0.8"/>
+      <circle cx="80" cy="160" r="5" fill="#10B981" opacity="0.9"/>
+      <circle cx="120" cy="160" r="7" fill="#F59E0B" opacity="0.7"/>
+      
+      <!-- Connections -->
+      <path d="M60,100 Q100,110 140,100" fill="none" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+      <path d="M100,130 Q90,145 80,160" fill="none" stroke="#10B981" stroke-width="1.5" opacity="0.5"/>
+      <path d="M100,130 Q110,145 120,160" fill="none" stroke="#F59E0B" stroke-width="1.5" opacity="0.5"/>
+    </g>
+    
+    <text x="100" y="230" font-family="Arial, sans-serif" font-size="12" fill="#10B981" text-anchor="middle">~1μm resolution</text>
+    <text x="100" y="245" font-family="Arial, sans-serif" font-size="10" fill="#888888" text-anchor="middle">Cellular pathology</text>
+  </g>
+  
+  <!-- Integration diagram -->
+  <g transform="translate(400, 350)">
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">MESOSCOPIC INTEGRATION</text>
+    
+    <!-- Scale bar -->
+    <rect x="-150" y="50" width="300" height="20" fill="none" stroke="#666666" stroke-width="1"/>
+    <rect x="-150" y="50" width="100" height="20" fill="#8B5CF6" opacity="0.6"/>
+    <rect x="-50" y="50" width="100" height="20" fill="#06B6D4" opacity="0.6"/>
+    <rect x="50" y="50" width="100" height="20" fill="#10B981" opacity="0.6"/>
+    
+    <text x="-100" y="90" font-family="Arial, sans-serif" font-size="10" fill="#8B5CF6" text-anchor="middle">MRI</text>
+    <text x="0" y="90" font-family="Arial, sans-serif" font-size="10" fill="#06B6D4" text-anchor="middle">Bridge</text>
+    <text x="100" y="90" font-family="Arial, sans-serif" font-size="10" fill="#10B981" text-anchor="middle">Microscopy</text>
+  </g>
+  
+  <!-- Bottom info -->
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="12" fill="#666666" text-anchor="middle">Placeholder: assets/images/platform/Slide1.png (800×600)</text>
+</svg>
