@@ -7,7 +7,7 @@
 .seminars-showcase-section {
   margin-bottom: 3rem;
   padding: 2rem 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); /* Dark scientific gradient */
   text-align: center;
 }
 
@@ -30,66 +30,66 @@
 }
 
 .showcase-description h2 {
-  color: #2c3e50;
+  color: #ffffff; /* White text for dark theme */
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .showcase-description p {
-  color: #5a6c7d;
+  color: #cccccc; /* Light gray text for dark theme */
   font-size: 1.1rem;
   line-height: 1.6;
   margin: 0;
 }
 
 .seminar-header {
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); /* Dark theme */
     padding: 2rem 0;
     margin-bottom: 2rem;
 }
 
 .seminar-info-card {
-    background-color: #ffffff;
-    border: 1px solid #dee2e6;
+    background: rgba(255, 255, 255, 0.05); /* Very subtle white overlay for dark theme */
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
 }
 
 .seminar-item {
-    background-color: #ffffff;
-    border: 1px solid #dee2e6;
+    background: rgba(255, 255, 255, 0.05); /* Very subtle white overlay for dark theme */
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1.25rem;
     margin-bottom: 1rem;
     transition: box-shadow 0.15s ease-in-out;
 }
 
 .seminar-item:hover {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.5rem 1rem rgba(139, 92, 246, 0.2); /* Purple scientific glow on hover */
 }
 
 .seminar-date {
     font-weight: bold;
-    color: #0056b3;
+    color: #06B6D4; /* Scientific cyan color */
     font-size: 1.1rem;
 }
 
 .seminar-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #212529;
+    color: #ffffff; /* White text for dark theme */
     margin: 0.5rem 0;
 }
 
 .seminar-presenter {
     font-style: italic;
-    color: #6c757d;
+    color: #A855F7; /* Scientific purple for presenter names */
     margin-bottom: 0.5rem;
 }
 
 .seminar-abstract {
-    color: #495057;
+    color: #e0e0e0; /* Light text for dark theme */
     line-height: 1.5;
 }
 
@@ -99,8 +99,9 @@
 
 .seminar-tag {
     display: inline-block;
-    background-color: #e7f1ff;
-    color: #0056b3;
+    background: rgba(139, 92, 246, 0.2); /* Purple scientific background */
+    color: #A855F7; /* Bright purple text */
+    border: 1px solid rgba(139, 92, 246, 0.3);
     padding: 0.25rem 0.75rem;
     font-size: 0.875rem;
     margin-right: 0.5rem;
@@ -117,22 +118,22 @@
 }
 
 .upcoming-seminars .seminar-item {
-    border-left: 4px solid #28a745;
+    border-left: 4px solid #10B981; /* Scientific green */
 }
 
 .archive-seminars .seminar-item {
-    border-left: 4px solid #6c757d;
+    border-left: 4px solid #666666; /* Neutral gray for archived */
 }
 
 .info-section {
-    background-color: #e7f1ff;
-    border-left: 4px solid #0056b3;
+    background: rgba(6, 182, 212, 0.1); /* Cyan tint for info sections */
+    border-left: 4px solid #06B6D4;
     padding: 1rem;
     margin: 1rem 0;
 }
 
 .agenda-item {
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle light border */
     padding: 0.75rem 0;
 }
 

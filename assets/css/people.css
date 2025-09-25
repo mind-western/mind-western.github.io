@@ -6,7 +6,7 @@
     width: 7.5vh;
     height: 7.5vh;
     border-radius: 25vw;
-    outline: rgb(0, 0, 80);
+    outline: rgba(139, 92, 246, 0.8); /* Scientific purple outline */
     outline-style: solid;
     outline-width: .25vh;
     object-fit: cover;
@@ -27,7 +27,7 @@
 }
 
 .horizontal-profile {
-    border-bottom: .1vh solid rgb(0, 0, 80);
+    border-bottom: .1vh solid rgba(255, 255, 255, 0.2); /* Light border for dark theme */
     margin-bottom: 1vh;
 }
 
@@ -87,7 +87,7 @@
     }
 
     .col-xl-4 {
-        border-right: .1vw solid rgb(0, 0, 80);
+        border-right: .1vw solid rgba(255, 255, 255, 0.2); /* Light border for dark theme */
     }
 
     .horizontal-profile {
