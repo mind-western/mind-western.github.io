@@ -7,7 +7,8 @@
 
 body {
   display: block; /* Changed from none to block for better fallback */
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #f1f3f4 100%); /* Subtle scientific gradient */
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%); /* Dark scientific gradient */
+  color: #e0e0e0; /* Light text for dark background */
   font-family: "Merriweather Sans", Arial, sans-serif; /* Added fallback fonts */
   font-size: 14px;
   line-height: 1.6;
@@ -108,6 +109,8 @@ video::-webkit-media-controls-panel {
   max-width: 1200px; /* Added max-width for better readability */
   margin-left: auto;
   margin-right: auto;
+  background: rgba(255, 255, 255, 0.02); /* Very subtle white overlay for content readability */
+  padding: 2rem;
 }
 
 .nav-brand {

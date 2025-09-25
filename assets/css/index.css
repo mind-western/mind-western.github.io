@@ -1,3 +1,6 @@
+/* Import platform styles for merged home/platform page */
+@import url('platform.css');
+
 /* 
   BACKGROUND VIDEO STYLES
   Responsive background video with overlay for text readability
