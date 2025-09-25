@@ -1,13 +1,109 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
   <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a365d;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#2d5a87;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#4a90bb;stop-opacity:1" />
+    <!-- Dark scientific background -->
+    <radialGradient id="darkbg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Simulated brain scan glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Fluorescent colors for microscopy simulation -->
+    <linearGradient id="fluorescentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6B46C1;stop-opacity:0.8" />
+      <stop offset="30%" style="stop-color:#8B5CF6;stop-opacity:0.9" />
+      <stop offset="60%" style="stop-color:#06B6D4;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:0.6" />
     </linearGradient>
   </defs>
-  <rect width="1920" height="1080" fill="url(#grad1)"/>
-  <text x="960" y="500" font-family="Arial, sans-serif" font-size="48" fill="white" text-anchor="middle">PLACEHOLDER VIDEO BACKGROUND</text>
-  <text x="960" y="560" font-family="Arial, sans-serif" font-size="32" fill="rgba(255,255,255,0.8)" text-anchor="middle">1920×1080 - Replace with background-hero.mp4</text>
-  <text x="960" y="620" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.6)" text-anchor="middle">Brain research • MRI technology • Microscopy innovation</text>
+  
+  <!-- Dark background -->
+  <rect width="1920" height="1080" fill="url(#darkbg)"/>
+  
+  <!-- Left side: Simulated MRI brain scan outline -->
+  <g transform="translate(200, 200)">
+    <!-- Brain outline (simplified) -->
+    <ellipse cx="280" cy="300" rx="250" ry="200" fill="none" stroke="#666666" stroke-width="2" opacity="0.7"/>
+    <ellipse cx="280" cy="300" rx="180" ry="140" fill="none" stroke="#888888" stroke-width="1.5" opacity="0.6"/>
+    
+    <!-- Simulated brain structures -->
+    <circle cx="220" cy="260" r="25" fill="#AAAAAA" opacity="0.8"/> <!-- Left structure -->
+    <circle cx="340" cy="260" r="25" fill="#AAAAAA" opacity="0.8"/> <!-- Right structure -->
+    <ellipse cx="280" cy="350" rx="60" ry="30" fill="#999999" opacity="0.7"/> <!-- Central structure -->
+    
+    <!-- MRI scan lines for authenticity -->
+    <g stroke="#555555" stroke-width="0.5" opacity="0.4">
+      <line x1="50" y1="150" x2="510" y2="150"/>
+      <line x1="50" y1="200" x2="510" y2="200"/>
+      <line x1="50" y1="250" x2="510" y2="250"/>
+      <line x1="50" y1="300" x2="510" y2="300"/>
+      <line x1="50" y1="350" x2="510" y2="350"/>
+      <line x1="50" y1="400" x2="510" y2="400"/>
+      <line x1="50" y1="450" x2="510" y2="450"/>
+    </g>
+    
+    <!-- Scale indicator -->
+    <line x1="50" y1="500" x2="150" y2="500" stroke="white" stroke-width="2"/>
+    <text x="100" y="520" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">15.2T MRI</text>
+  </g>
+  
+  <!-- Right side: Simulated fluorescent microscopy -->
+  <g transform="translate(1100, 200)">
+    <!-- Brain outline with fluorescent coloring -->
+    <ellipse cx="280" cy="300" rx="250" ry="200" fill="url(#fluorescentGrad)" opacity="0.3"/>
+    
+    <!-- Neural network pattern -->
+    <g filter="url(#glow)">
+      <!-- Bright neural clusters -->
+      <circle cx="180" cy="220" r="8" fill="#8B5CF6" opacity="0.9"/>
+      <circle cx="220" cy="180" r="6" fill="#A855F7" opacity="0.8"/>
+      <circle cx="280" cy="200" r="10" fill="#7C3AED" opacity="0.9"/>
+      <circle cx="340" cy="240" r="7" fill="#8B5CF6" opacity="0.8"/>
+      <circle cx="380" cy="280" r="9" fill="#A855F7" opacity="0.9"/>
+      <circle cx="320" cy="320" r="6" fill="#7C3AED" opacity="0.8"/>
+      <circle cx="240" cy="360" r="8" fill="#8B5CF6" opacity="0.9"/>
+      <circle cx="180" cy="380" r="5" fill="#A855F7" opacity="0.7"/>
+      
+      <!-- Connecting pathways -->
+      <path d="M180,220 Q200,200 220,180" fill="none" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+      <path d="M220,180 Q250,190 280,200" fill="none" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+      <path d="M280,200 Q310,220 340,240" fill="none" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+      <path d="M340,240 Q360,260 380,280" fill="none" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+      <path d="M380,280 Q350,300 320,320" fill="none" stroke="#10B981" stroke-width="2" opacity="0.5"/>
+      <path d="M320,320 Q280,340 240,360" fill="none" stroke="#10B981" stroke-width="2" opacity="0.5"/>
+      <path d="M240,360 Q210,370 180,380" fill="none" stroke="#10B981" stroke-width="2" opacity="0.5"/>
+    </g>
+    
+    <!-- Scale indicator -->
+    <line x1="450" y1="500" x2="500" y2="500" stroke="#06B6D4" stroke-width="2"/>
+    <text x="475" y="520" font-family="Arial, sans-serif" font-size="12" fill="#06B6D4" text-anchor="middle">Light Sheet</text>
+  </g>
+  
+  <!-- Center text overlay - more scientific -->
+  <g transform="translate(960, 540)">
+    <text x="0" y="-40" font-family="Arial, sans-serif" font-size="42" fill="white" text-anchor="middle" font-weight="300">NEUROIMAGING DATA VISUALIZATION</text>
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" fill="#CCCCCC" text-anchor="middle">1920×1080 • Replace with background-hero.mp4</text>
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="18" fill="#999999" text-anchor="middle">Multi-scale brain imaging • 15.2T MRI • Light sheet microscopy</text>
+    
+    <!-- Data visualization elements -->
+    <g transform="translate(0, 80)">
+      <rect x="-300" y="0" width="600" height="2" fill="#333333"/>
+      <circle cx="-250" cy="1" r="3" fill="#8B5CF6"/>
+      <circle cx="-150" cy="1" r="3" fill="#06B6D4"/>
+      <circle cx="-50" cy="1" r="3" fill="#10B981"/>
+      <circle cx="50" cy="1" r="3" fill="#F59E0B"/>
+      <circle cx="150" cy="1" r="3" fill="#EF4444"/>
+      <circle cx="250" cy="1" r="3" fill="#8B5CF6"/>
+      
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="14" fill="#666666" text-anchor="middle">Mesoscopic Integration Scale</text>
+    </g>
+  </g>
 </svg>

@@ -1,12 +1,129 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="bannergradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f4c75;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#3282b8;stop-opacity:1" />
+    <!-- Dark scientific background -->
+    <linearGradient id="darkSciBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
     </linearGradient>
+    
+    <!-- Glow effect for scientific elements -->
+    <filter id="sciGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Brain tissue gradient -->
+    <radialGradient id="brainGrad" cx="30%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+      <stop offset="40%" style="stop-color:#CCCCCC;stop-opacity:0.7" />
+      <stop offset="80%" style="stop-color:#888888;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#444444;stop-opacity:0.3" />
+    </radialGradient>
+    
+    <!-- Fluorescent neural activity -->
+    <radialGradient id="neuralGlow" cx="70%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.8" />
+      <stop offset="30%" style="stop-color:#06B6D4;stop-opacity:0.6" />
+      <stop offset="60%" style="stop-color:#10B981;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#3730A3;stop-opacity:0.2" />
+    </radialGradient>
   </defs>
-  <rect width="1280" height="720" fill="url(#bannergradient)"/>
-  <text x="640" y="320" font-family="Arial, sans-serif" font-size="36" fill="white" text-anchor="middle">BANNER PLACEHOLDER</text>
-  <text x="640" y="380" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">1280×720 - Banner/Hero Visual</text>
-  <text x="640" y="420" font-family="Arial, sans-serif" font-size="18" fill="rgba(255,255,255,0.6)" text-anchor="middle">Replace with actual banner content</text>
+  
+  <!-- Dark background -->
+  <rect width="1280" height="720" fill="url(#darkSciBg)"/>
+  
+  <!-- Left brain hemisphere (MRI style) -->
+  <g transform="translate(150, 150)">
+    <!-- Main brain structure -->
+    <ellipse cx="150" cy="180" rx="120" ry="150" fill="url(#brainGrad)" opacity="0.8"/>
+    
+    <!-- Internal brain structures -->
+    <ellipse cx="150" cy="160" rx="80" ry="100" fill="none" stroke="#AAAAAA" stroke-width="1" opacity="0.6"/>
+    <ellipse cx="150" cy="200" rx="50" ry="60" fill="none" stroke="#999999" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Cortical details -->
+    <path d="M80,120 Q150,100 220,120 Q200,140 180,160 Q150,140 120,160 Q100,140 80,120" 
+          fill="none" stroke="#CCCCCC" stroke-width="1.5" opacity="0.7"/>
+    <path d="M90,250 Q150,270 210,250 Q190,230 170,210 Q150,230 130,210 Q110,230 90,250" 
+          fill="none" stroke="#CCCCCC" stroke-width="1.5" opacity="0.7"/>
+    
+    <!-- Scan grid overlay -->
+    <g stroke="#555555" stroke-width="0.3" opacity="0.3">
+      <line x1="30" y1="60" x2="270" y2="60"/>
+      <line x1="30" y1="120" x2="270" y2="120"/>
+      <line x1="30" y1="180" x2="270" y2="180"/>
+      <line x1="30" y1="240" x2="270" y2="240"/>
+      <line x1="30" y1="300" x2="270" y2="300"/>
+    </g>
+  </g>
+  
+  <!-- Right hemisphere (fluorescent microscopy style) -->
+  <g transform="translate(700, 150)">
+    <!-- Neural network background -->
+    <ellipse cx="150" cy="180" rx="120" ry="150" fill="url(#neuralGlow)" opacity="0.4"/>
+    
+    <!-- Neural pathways -->
+    <g filter="url(#sciGlow)">
+      <!-- Major neural clusters -->
+      <circle cx="100" cy="120" r="6" fill="#8B5CF6" opacity="0.9"/>
+      <circle cx="150" cy="100" r="8" fill="#A855F7" opacity="0.8"/>
+      <circle cx="200" cy="130" r="5" fill="#7C3AED" opacity="0.9"/>
+      <circle cx="120" cy="180" r="7" fill="#06B6D4" opacity="0.8"/>
+      <circle cx="180" cy="170" r="6" fill="#0891B2" opacity="0.9"/>
+      <circle cx="140" cy="220" r="8" fill="#10B981" opacity="0.8"/>
+      <circle cx="190" cy="250" r="5" fill="#059669" opacity="0.9"/>
+      <circle cx="110" cy="260" r="6" fill="#8B5CF6" opacity="0.7"/>
+      
+      <!-- Neural connections -->
+      <path d="M100,120 Q125,110 150,100" fill="none" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+      <path d="M150,100 Q175,115 200,130" fill="none" stroke="#06B6D4" stroke-width="2" opacity="0.6"/>
+      <path d="M200,130 Q190,150 180,170" fill="none" stroke="#10B981" stroke-width="2" opacity="0.5"/>
+      <path d="M180,170 Q160,195 140,220" fill="none" stroke="#10B981" stroke-width="2" opacity="0.5"/>
+      <path d="M140,220 Q165,235 190,250" fill="none" stroke="#8B5CF6" stroke-width="2" opacity="0.4"/>
+      <path d="M190,250 Q150,255 110,260" fill="none" stroke="#8B5CF6" stroke-width="2" opacity="0.4"/>
+      <path d="M110,260 Q115,220 120,180" fill="none" stroke="#A855F7" stroke-width="2" opacity="0.5"/>
+      <path d="M120,180 Q110,150 100,120" fill="none" stroke="#A855F7" stroke-width="2" opacity="0.5"/>
+    </g>
+    
+    <!-- Microscopy scale markers -->
+    <g stroke="#06B6D4" stroke-width="0.5" opacity="0.5">
+      <circle cx="50" cy="50" r="20" fill="none"/>
+      <circle cx="50" cy="50" r="40" fill="none"/>
+      <circle cx="50" cy="50" r="60" fill="none"/>
+    </g>
+  </g>
+  
+  <!-- Central dividing line -->
+  <line x1="640" y1="100" x2="640" y2="620" stroke="#333333" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Scientific labels and info -->
+  <g transform="translate(640, 400)">
+    <text x="0" y="-40" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="300">MULTI-SCALE BRAIN IMAGING</text>
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" fill="#CCCCCC" text-anchor="middle">1280×720 • Banner/Hero Visual Placeholder</text>
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="14" fill="#999999" text-anchor="middle">Structural MRI ← → Functional Microscopy</text>
+    
+    <!-- Scale indicators -->
+    <g transform="translate(-200, 60)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" fill="#AAAAAA" text-anchor="middle">15.2T MRI</text>
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="10" fill="#888888" text-anchor="middle">~100μm resolution</text>
+    </g>
+    
+    <g transform="translate(200, 60)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" fill="#06B6D4" text-anchor="middle">Light Sheet</text>
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="10" fill="#0891B2" text-anchor="middle">~1μm resolution</text>
+    </g>
+  </g>
+  
+  <!-- Corner indicators for technical specs -->
+  <g transform="translate(50, 670)">
+    <text font-family="Arial, sans-serif" font-size="10" fill="#666666">MIND Platform • Mesoscopic Integration</text>
+  </g>
+  
+  <g transform="translate(1180, 670)">
+    <text font-family="Arial, sans-serif" font-size="10" fill="#666666" text-anchor="end">Scientific Visualization</text>
+  </g>
 </svg>

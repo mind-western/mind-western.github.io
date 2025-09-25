@@ -7,7 +7,7 @@
 
 body {
   display: block; /* Changed from none to block for better fallback */
-  background-color: rgb(240, 240, 240);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #f1f3f4 100%); /* Subtle scientific gradient */
   font-family: "Merriweather Sans", Arial, sans-serif; /* Added fallback fonts */
   font-size: 14px;
   line-height: 1.6;

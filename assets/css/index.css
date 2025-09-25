@@ -26,7 +26,7 @@
 .hero-overlay {
   position: relative;
   z-index: 2;
-  background: rgba(0, 0, 20, 0.4); /* Semi-transparent dark overlay */
+  background: rgba(0, 0, 0, 0.6); /* Darker overlay to complement scientific imagery */
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -46,14 +46,17 @@
 
 .hero-content .platform-title {
   color: white;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.9); /* Stronger shadow for dark backgrounds */
   font-size: clamp(24px, 4vw, 48px);
+  font-weight: 300; /* Lighter weight for scientific look */
+  letter-spacing: 0.05em; /* Slight spacing for readability */
 }
 
 .hero-content #mr-lightsheet {
-  filter: brightness(1.1) contrast(1.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
+  filter: brightness(1.2) contrast(1.4); /* Enhanced contrast for dark background */
+  box-shadow: 0 12px 48px rgba(139, 92, 246, 0.3); /* Purple glow matching scientific theme */
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.1); /* Subtle border */
 }
 
 /* 
@@ -85,31 +88,39 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9)); /* Darker gradient for scientific imagery */
   color: white;
   padding: 2rem;
   text-align: center;
+  border-radius: 0 0 12px 12px;
 }
 
 .banner-overlay h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  font-weight: 700;
+  font-weight: 300; /* Lighter weight for scientific aesthetic */
+  letter-spacing: 0.02em;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
 }
 
 .banner-overlay p {
   font-size: 1.2rem;
   margin: 0;
-  opacity: 0.9;
+  opacity: 0.95;
+  font-weight: 300;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
 }
 
 /*
   RESEARCH HIGHLIGHTS SECTION
-  Enhanced section with large visuals
+  Enhanced section with scientific large visuals
 */
 .research-highlights-section {
   margin: 4rem 0;
-  padding: 2rem 0;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%); /* Dark scientific background */
+  border-radius: 16px;
+  color: white;
 }
 
 .section-visual-container {
@@ -121,21 +132,51 @@
   width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.2); /* Scientific purple glow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .section-visual:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 16px 48px rgba(139, 92, 246, 0.3);
+}
+
+/* Research section text styling */
+.research-highlights-section h2 {
+  color: white;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.research-highlights-section p {
+  color: #e0e0e0;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.research-highlights-section ul {
+  color: #cccccc;
+}
+
+.research-highlights-section li {
+  margin-bottom: 0.8rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid #8B5CF6;
+  margin-left: 1rem;
 }
 
 /*
   TECHNOLOGY SHOWCASE
-  Equipment and technology visual section
+  Equipment and technology visual section with scientific styling
 */
 .technology-showcase {
   text-align: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .technology-visual {
@@ -144,14 +185,23 @@
   max-height: 250px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 24px rgba(6, 182, 212, 0.2); /* Cyan scientific glow */
   margin-bottom: 1rem;
+  border: 1px solid rgba(6, 182, 212, 0.3);
 }
 
 .technology-description {
   font-size: 0.95rem;
-  color: #666;
+  color: #e0e0e0;
   line-height: 1.5;
+  font-weight: 300;
+}
+
+/* Technology section header */
+.col-lg-6.col-sm-6 h2 {
+  color: #f0f0f0;
+  font-weight: 300;
+  letter-spacing: 0.02em;
 }
 
 /* Original styles maintained below */
@@ -227,6 +277,7 @@
   
   .hero-overlay {
     min-height: 60vh;
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay on mobile for better readability */
   }
   
   .hero-content {
@@ -235,8 +286,9 @@
   
   .hero-content .platform-title {
     font-size: 20px;
-    letter-spacing: 0.1vw;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.02em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    font-weight: 300;
   }
 
   /* Banner section mobile */
@@ -246,6 +298,7 @@
   
   .banner-overlay h2 {
     font-size: 1.5rem;
+    font-weight: 300;
   }
   
   .banner-overlay p {
@@ -255,7 +308,7 @@
   /* Research highlights mobile */
   .research-highlights-section {
     margin: 2rem 0;
-    padding: 1rem 0;
+    padding: 2rem 1rem;
   }
   
   .research-highlights-section .row {
@@ -264,6 +317,10 @@
   
   .technology-visual {
     max-height: 200px;
+  }
+  
+  .technology-showcase {
+    padding: 1.5rem 1rem;
   }
 
   /* Original mobile styles */
@@ -275,10 +332,11 @@
 
   .platform-title {
     font-size: 20px;
-    letter-spacing: 0.1vw;
-    text-shadow: 0.1vw 0 #000;
+    letter-spacing: 0.02em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
     margin: 0.8rem 0;
     padding: 0 10px;
+    font-weight: 300;
   }
 
   .funding {
@@ -311,12 +369,14 @@
   
   .hero-overlay {
     min-height: 70vh;
+    background: rgba(0, 0, 0, 0.65); /* Balanced overlay for tablet */
   }
   
   .hero-content .platform-title {
     font-size: 28px;
-    letter-spacing: 0.12vw;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 0.02em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-weight: 300;
   }
 
   /* Banner section tablet */
@@ -326,6 +386,11 @@
   
   .banner-overlay h2 {
     font-size: 1.75rem;
+    font-weight: 300;
+  }
+  
+  .research-highlights-section {
+    padding: 2.5rem 1rem;
   }
 
   /* Original tablet styles */
@@ -336,8 +401,9 @@
 
   .platform-title {
     font-size: 28px;
-    letter-spacing: 0.12vw;
-    text-shadow: 0.12vw 0 #000;
+    letter-spacing: 0.02em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-weight: 300;
   }
 
   .funding {
@@ -363,12 +429,14 @@
   
   .hero-overlay {
     min-height: 85vh;
+    background: rgba(0, 0, 0, 0.6); /* Optimal overlay for desktop */
   }
   
   .hero-content .platform-title {
-    font-size: 36px;
-    letter-spacing: 0.2vw;
+    font-size: 42px;
+    letter-spacing: 0.02em;
     margin: 1.5rem 0;
+    font-weight: 300;
   }
 
   /* Banner section desktop */
@@ -379,14 +447,19 @@
   /* Research highlights desktop */
   .research-highlights-section {
     margin: 5rem 0;
-    padding: 3rem 0;
+    padding: 4rem 2rem;
+  }
+  
+  .technology-showcase {
+    padding: 2.5rem 2rem;
   }
 
   /* Original desktop styles */
   .platform-title {
-    font-size: 36px;
-    letter-spacing: 0.2vw;
+    font-size: 42px;
+    letter-spacing: 0.02em;
     margin: 1.5rem 0;
+    font-weight: 300;
   }
 
   .funding {

@@ -1,12 +1,134 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
   <defs>
-    <linearGradient id="sectiongradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#2c5aa0;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#64b5f6;stop-opacity:1" />
+    <!-- Dark research background -->
+    <radialGradient id="researchBg" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#0f0f0f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Data visualization glow -->
+    <filter id="dataGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Brain connectivity gradient -->
+    <linearGradient id="connectivityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:0.8" />
+      <stop offset="25%" style="stop-color:#8B5CF6;stop-opacity:0.7" />
+      <stop offset="50%" style="stop-color:#06B6D4;stop-opacity:0.6" />
+      <stop offset="75%" style="stop-color:#10B981;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:0.4" />
     </linearGradient>
   </defs>
-  <rect width="800" height="600" fill="url(#sectiongradient)"/>
-  <text x="400" y="270" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle">SECTION VISUAL</text>
-  <text x="400" y="320" font-family="Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.8)" text-anchor="middle">800×600 - Flexible</text>
-  <text x="400" y="360" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.6)" text-anchor="middle">Research highlights, features, etc.</text>
+  
+  <!-- Dark background -->
+  <rect width="800" height="600" fill="url(#researchBg)"/>
+  
+  <!-- Central brain network visualization -->
+  <g transform="translate(400, 300)">
+    <!-- Large central brain outline -->
+    <ellipse cx="0" cy="0" rx="180" ry="140" fill="none" stroke="#444444" stroke-width="2" opacity="0.6"/>
+    <ellipse cx="0" cy="0" rx="120" ry="90" fill="none" stroke="#666666" stroke-width="1.5" opacity="0.5"/>
+    
+    <!-- Brain regions with scientific coloring -->
+    <g filter="url(#dataGlow)">
+      <!-- Major brain nodes -->
+      <circle cx="-80" cy="-60" r="12" fill="#8B5CF6" opacity="0.9"/>
+      <circle cx="80" cy="-60" r="12" fill="#8B5CF6" opacity="0.9"/>
+      <circle cx="-60" cy="0" r="10" fill="#06B6D4" opacity="0.8"/>
+      <circle cx="60" cy="0" r="10" fill="#06B6D4" opacity="0.8"/>
+      <circle cx="0" cy="-40" r="14" fill="#7C3AED" opacity="0.9"/>
+      <circle cx="0" cy="40" r="11" fill="#10B981" opacity="0.8"/>
+      <circle cx="-40" cy="60" r="8" fill="#F59E0B" opacity="0.7"/>
+      <circle cx="40" cy="60" r="8" fill="#F59E0B" opacity="0.7"/>
+      
+      <!-- Inter-hemispheric connections -->
+      <path d="M-80,-60 Q0,-80 80,-60" fill="none" stroke="url(#connectivityGrad)" stroke-width="3" opacity="0.6"/>
+      <path d="M-60,0 Q0,-20 60,0" fill="none" stroke="url(#connectivityGrad)" stroke-width="2.5" opacity="0.5"/>
+      <path d="M-40,60 Q0,40 40,60" fill="none" stroke="url(#connectivityGrad)" stroke-width="2" opacity="0.4"/>
+      
+      <!-- Intra-hemispheric connections -->
+      <path d="M-80,-60 Q-70,-30 -60,0" fill="none" stroke="#06B6D4" stroke-width="2" opacity="0.5"/>
+      <path d="M80,-60 Q70,-30 60,0" fill="none" stroke="#06B6D4" stroke-width="2" opacity="0.5"/>
+      <path d="M-60,0 Q-50,30 -40,60" fill="none" stroke="#10B981" stroke-width="2" opacity="0.4"/>
+      <path d="M60,0 Q50,30 40,60" fill="none" stroke="#10B981" stroke-width="2" opacity="0.4"/>
+      
+      <!-- Central connections -->
+      <path d="M0,-40 Q-30,-20 -60,0" fill="none" stroke="#8B5CF6" stroke-width="2" opacity="0.5"/>
+      <path d="M0,-40 Q30,-20 60,0" fill="none" stroke="#8B5CF6" stroke-width="2" opacity="0.5"/>
+      <path d="M0,40 Q-20,50 -40,60" fill="none" stroke="#F59E0B" stroke-width="2" opacity="0.4"/>
+      <path d="M0,40 Q20,50 40,60" fill="none" stroke="#F59E0B" stroke-width="2" opacity="0.4"/>
+    </g>
+    
+    <!-- Data flow indicators -->
+    <g stroke="#333333" stroke-width="0.5" opacity="0.4">
+      <!-- Radial grid -->
+      <circle cx="0" cy="0" r="60" fill="none"/>
+      <circle cx="0" cy="0" r="100" fill="none"/>
+      <circle cx="0" cy="0" r="140" fill="none"/>
+      <line x1="-150" y1="0" x2="150" y2="0"/>
+      <line x1="0" y1="-120" x2="0" y2="120"/>
+      <line x1="-106" y1="-85" x2="106" y2="85"/>
+      <line x1="106" y1="-85" x2="-106" y2="85"/>
+    </g>
+  </g>
+  
+  <!-- Data visualization panels (side elements) -->
+  <g transform="translate(100, 80)">
+    <!-- Left data panel -->
+    <rect x="0" y="0" width="80" height="60" fill="#1a1a1a" stroke="#444444" stroke-width="1" opacity="0.8"/>
+    <g stroke="#8B5CF6" stroke-width="1" opacity="0.6">
+      <line x1="10" y1="50" x2="20" y2="30"/>
+      <line x1="20" y1="30" x2="30" y2="40"/>
+      <line x1="30" y1="40" x2="40" y2="20"/>
+      <line x1="40" y1="20" x2="50" y2="35"/>
+      <line x1="50" y1="35" x2="60" y2="15"/>
+      <line x1="60" y1="15" x2="70" y2="25"/>
+    </g>
+    <text x="40" y="75" font-family="Arial, sans-serif" font-size="10" fill="#888888" text-anchor="middle">MRI Data</text>
+  </g>
+  
+  <g transform="translate(620, 80)">
+    <!-- Right data panel -->
+    <rect x="0" y="0" width="80" height="60" fill="#1a1a1a" stroke="#444444" stroke-width="1" opacity="0.8"/>
+    <g fill="#06B6D4" opacity="0.6">
+      <circle cx="15" cy="45" r="2"/>
+      <circle cx="25" cy="25" r="3"/>
+      <circle cx="35" cy="35" r="2"/>
+      <circle cx="45" cy="15" r="4"/>
+      <circle cx="55" cy="40" r="2"/>
+      <circle cx="65" cy="20" r="3"/>
+    </g>
+    <text x="40" y="75" font-family="Arial, sans-serif" font-size="10" fill="#888888" text-anchor="middle">Microscopy</text>
+  </g>
+  
+  <!-- Bottom data timeline -->
+  <g transform="translate(150, 520)">
+    <rect x="0" y="0" width="500" height="40" fill="#1a1a1a" stroke="#333333" stroke-width="1" opacity="0.7"/>
+    <line x1="50" y1="20" x2="450" y2="20" stroke="#444444" stroke-width="1"/>
+    
+    <!-- Time markers -->
+    <g fill="#10B981" opacity="0.6">
+      <circle cx="80" cy="20" r="3"/>
+      <circle cx="150" cy="20" r="4"/>
+      <circle cx="220" cy="20" r="2"/>
+      <circle cx="290" cy="20" r="5"/>
+      <circle cx="360" cy="20" r="3"/>
+      <circle cx="420" cy="20" r="4"/>
+    </g>
+    
+    <text x="250" y="55" font-family="Arial, sans-serif" font-size="10" fill="#666666" text-anchor="middle">Temporal Analysis Pipeline</text>
+  </g>
+  
+  <!-- Title and specifications -->
+  <g transform="translate(400, 50)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="300">RESEARCH VISUALIZATION</text>
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="14" fill="#CCCCCC" text-anchor="middle">800×600 • Section Visual Placeholder</text>
+    <text x="0" y="40" font-family="Arial, sans-serif" font-size="12" fill="#999999" text-anchor="middle">Multi-modal brain connectivity analysis</text>
+  </g>
 </svg>
