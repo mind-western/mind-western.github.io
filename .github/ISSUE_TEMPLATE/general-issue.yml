@@ -1,0 +1,40 @@
+name: General Issue or Feature Request
+description: Report a bug, technical issue, or request a new feature
+title: "[Issue]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## The problem
+        
+        Briefly describe the issue you are experiencing (or feature you want to see added). Tell us what you were trying to do and what happened instead.
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Issue Description
+      description: Provide a detailed description of the problem or feature request
+      placeholder: "Tell us what you were trying to do and what happened..."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Files
+      description: |
+        If you have any helpful screenshots or files, please include them here.
+        You can drag and drop images or files directly into this text area.
+      placeholder: "Drag and drop files here"
+    validations:
+      required: false
+  
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any other context, error messages, or relevant details
+      placeholder: "Additional context..."
+    validations:
+      required: false
