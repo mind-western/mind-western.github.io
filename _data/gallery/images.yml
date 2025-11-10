@@ -1,0 +1,35 @@
+# Images for the gallery
+# Each entry should have: title, description, image path, category, and optional date
+
+images:
+  - title: "15.2T MRI Scanner"
+    description: "Canada's most powerful MRI scanner for ultra-high field neuroimaging"
+    image: "/assets/images/equipment/bruker-15t-mri.jpg"
+    category: "equipment"
+    date: "2025-06-01"
+  
+  - title: "Miltenyi Blaze Ultramicroscope"
+    description: "Advanced lightsheet microscopy system for whole-brain imaging"
+    image: "/assets/images/equipment/blaze-ultramicroscope.jpg"
+    category: "equipment"
+    date: "2025-06-01"
+  
+  - title: "LifeCanvas SmartBatch Clearing"
+    description: "Automated tissue clearing system for enhanced transparency"
+    image: "/assets/images/equipment/smartbatch-clearing.jpg"
+    category: "equipment"
+    date: "2025-06-01"
+  
+  - title: "MRI and Lightsheet Comparison"
+    description: "Brain images captured by 15.2 Tesla MRI (left) and light sheet microscopy (right)"
+    image: "/assets/images/index/mr_lightsheet.png"
+    category: "research"
+    date: "2025-06-01"
+  
+  # Add more images here as they become available
+  # Template:
+  # - title: "Image Title"
+  #   description: "Brief description of the image"
+  #   image: "/assets/images/gallery/filename.jpg"
+  #   category: "equipment|research|events|training"
+  #   date: "YYYY-MM-DD"

@@ -1,0 +1,21 @@
+# Gallery Information
+title: "Gallery"
+description: "Images and videos from the MIND Platform showcasing our research, equipment, and discoveries"
+
+# Categories for organizing content
+categories:
+  - name: "Equipment & Facilities"
+    id: "equipment"
+    description: "Our state-of-the-art imaging equipment and research facilities"
+  
+  - name: "Research Highlights"
+    id: "research"
+    description: "Key findings and visualizations from our research projects"
+  
+  - name: "Events & Seminars"
+    id: "events"
+    description: "Photos and videos from seminars, workshops, and team events"
+  
+  - name: "Training & Education"
+    id: "training"
+    description: "Educational content and training materials"

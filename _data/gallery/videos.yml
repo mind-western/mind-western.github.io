@@ -1,0 +1,120 @@
+# Videos for the gallery
+# Each entry should have: title, description, youtube_id (placeholder for now), category, and optional date
+# When videos are posted to YouTube, update the youtube_id field with the actual video ID
+
+videos:
+  # Equipment & Facilities Videos
+  - title: "15.2T MRI Scanner Overview"
+    description: "Tour of Canada's most powerful MRI scanner and its capabilities"
+    youtube_id: "PLACEHOLDER_VIDEO_1"
+    category: "equipment"
+    date: "2025-06-01"
+    duration: "TBD"
+  
+  - title: "Lightsheet Microscopy Demo"
+    description: "Demonstration of the Miltenyi Blaze Ultramicroscope in action"
+    youtube_id: "PLACEHOLDER_VIDEO_2"
+    category: "equipment"
+    date: "2025-06-01"
+    duration: "TBD"
+  
+  - title: "Tissue Clearing Process"
+    description: "Step-by-step guide to our tissue clearing workflow"
+    youtube_id: "PLACEHOLDER_VIDEO_3"
+    category: "training"
+    date: "2025-06-01"
+    duration: "TBD"
+  
+  # Research Highlights Videos
+  - title: "Brain Connectivity Visualization"
+    description: "Visualizing brain network connectivity from MRI data"
+    youtube_id: "PLACEHOLDER_VIDEO_4"
+    category: "research"
+    date: "2025-06-01"
+    duration: "TBD"
+  
+  - title: "Patho-connectomics Approach"
+    description: "How we link functional connectivity with molecular pathology"
+    youtube_id: "PLACEHOLDER_VIDEO_5"
+    category: "research"
+    date: "2025-06-01"
+    duration: "TBD"
+  
+  - title: "Whole Brain Lightsheet Imaging"
+    description: "Time-lapse of whole brain imaging with lightsheet microscopy"
+    youtube_id: "PLACEHOLDER_VIDEO_6"
+    category: "research"
+    date: "2025-06-01"
+    duration: "TBD"
+  
+  # Training & Education Videos
+  - title: "MRI Data Acquisition Tutorial"
+    description: "Training video for MRI scanning protocols"
+    youtube_id: "PLACEHOLDER_VIDEO_7"
+    category: "training"
+    date: "2025-06-01"
+    duration: "TBD"
+  
+  - title: "Image Processing Pipeline"
+    description: "Overview of our automated processing pipelines"
+    youtube_id: "PLACEHOLDER_VIDEO_8"
+    category: "training"
+    date: "2025-06-01"
+    duration: "TBD"
+  
+  - title: "SPIMquant Software Tutorial"
+    description: "Getting started with SPIMquant for lightsheet data analysis"
+    youtube_id: "PLACEHOLDER_VIDEO_9"
+    category: "training"
+    date: "2025-06-01"
+    duration: "TBD"
+  
+  # Events & Seminars Videos
+  - title: "MIND Platform Launch Event"
+    description: "Highlights from the official launch of the MIND Platform"
+    youtube_id: "PLACEHOLDER_VIDEO_10"
+    category: "events"
+    date: "2025-06-23"
+    duration: "TBD"
+  
+  - title: "Seminar: Multi-scale Brain Imaging"
+    description: "Research seminar on multi-scale imaging approaches"
+    youtube_id: "PLACEHOLDER_VIDEO_11"
+    category: "events"
+    date: "2025-06-01"
+    duration: "TBD"
+  
+  - title: "Lab Tour and Workflow"
+    description: "Complete tour of the MIND Platform facilities and workflow"
+    youtube_id: "PLACEHOLDER_VIDEO_12"
+    category: "equipment"
+    date: "2025-06-01"
+    duration: "TBD"
+  
+  # Additional placeholder slots for upcoming videos
+  - title: "Research Project Showcase 1"
+    description: "Detailed showcase of ongoing research project"
+    youtube_id: "PLACEHOLDER_VIDEO_13"
+    category: "research"
+    date: "2025-06-01"
+    duration: "TBD"
+  
+  - title: "Research Project Showcase 2"
+    description: "Detailed showcase of ongoing research project"
+    youtube_id: "PLACEHOLDER_VIDEO_14"
+    category: "research"
+    date: "2025-06-01"
+    duration: "TBD"
+  
+  - title: "Research Project Showcase 3"
+    description: "Detailed showcase of ongoing research project"
+    youtube_id: "PLACEHOLDER_VIDEO_15"
+    category: "research"
+    date: "2025-06-01"
+    duration: "TBD"
+
+# Note: To update a video with a real YouTube ID:
+# 1. Upload the video to YouTube
+# 2. Get the video ID from the URL (e.g., https://www.youtube.com/watch?v=VIDEO_ID)
+# 3. Replace PLACEHOLDER_VIDEO_X with the actual VIDEO_ID
+# 4. Update the duration if known
