@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📖 Website Documentation
+    url: https://github.com/mind-western/mind-western.github.io/blob/master/README.md
+    about: Read the README for information on how to update the website
