@@ -1,0 +1,179 @@
+---
+layout: base
+permalink: /gallery/
+title: "GALLERY |"
+style: /assets/css/gallery.css
+description: "Explore images and videos showcasing the MIND Platform's cutting-edge research, equipment, and discoveries"
+---
+
+<!-- Get data from files -->
+{% assign info = site.data.gallery.info %}
+{% assign images = site.data.gallery.images.images %}
+{% assign videos = site.data.gallery.videos.videos %}
+
+<!-- Header Section -->
+<div class="row">
+  <div class="col-12">
+    <div class="gallery-header text-center">
+      <h1>{{ info.title }}</h1>
+      <p class="lead">{{ info.description }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Category Filter Tabs -->
+<div class="row">
+  <div class="col-12">
+    <div class="category-filter text-center">
+      <button class="filter-btn active" data-category="all">All</button>
+      {% for category in info.categories %}
+      <button class="filter-btn" data-category="{{ category.id }}">{{ category.name }}</button>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Videos Section -->
+<div class="row mt-5">
+  <div class="col-12">
+    <h2>🎥 Videos</h2>
+    <hr />
+    
+    <div class="gallery-grid" id="videos-grid">
+      {% for video in videos %}
+      <div class="gallery-item video-item" data-category="{{ video.category }}">
+        <div class="video-container">
+          {% if video.youtube_id contains "PLACEHOLDER" %}
+            <!-- Placeholder for video not yet uploaded -->
+            <div class="video-placeholder">
+              <div class="placeholder-content">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-camera-video" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1z"/>
+                </svg>
+                <p class="mt-3">Video Coming Soon</p>
+                <small class="text-muted">{{ video.youtube_id }}</small>
+              </div>
+            </div>
+          {% else %}
+            <!-- Actual YouTube embed -->
+            <iframe
+              src="https://www.youtube.com/embed/{{ video.youtube_id }}"
+              title="{{ video.title }}"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          {% endif %}
+        </div>
+        <div class="gallery-item-info">
+          <h5>{{ video.title }}</h5>
+          <p>{{ video.description }}</p>
+          {% if video.duration %}
+          <small class="text-muted">Duration: {{ video.duration }}</small>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Images Section -->
+<div class="row mt-5">
+  <div class="col-12">
+    <h2>📸 Images</h2>
+    <hr />
+    
+    <div class="gallery-grid" id="images-grid">
+      {% for image in images %}
+      <div class="gallery-item image-item" data-category="{{ image.category }}">
+        <div class="image-container">
+          <img src="{{ image.image }}" alt="{{ image.title }}" class="gallery-image" loading="lazy" />
+          <div class="image-overlay">
+            <button class="btn btn-light btn-sm view-full" data-bs-toggle="modal" data-bs-target="#imageModal{{ forloop.index }}">
+              View Full Size
+            </button>
+          </div>
+        </div>
+        <div class="gallery-item-info">
+          <h5>{{ image.title }}</h5>
+          <p>{{ image.description }}</p>
+        </div>
+      </div>
+      
+      <!-- Modal for full-size image -->
+      <div class="modal fade" id="imageModal{{ forloop.index }}" tabindex="-1" aria-labelledby="imageModalLabel{{ forloop.index }}" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="imageModalLabel{{ forloop.index }}">{{ image.title }}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="{{ image.image }}" alt="{{ image.title }}" class="img-fluid" />
+              <p class="mt-3">{{ image.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Information Section -->
+<div class="row mt-5">
+  <div class="col-12">
+    <div class="info-section">
+      <h3>About Our Gallery</h3>
+      <p>
+        This gallery showcases the cutting-edge technology, research discoveries, and collaborative environment of the MIND Platform. 
+        We regularly update this page with new images and videos from our research activities, equipment demonstrations, seminars, and training sessions.
+      </p>
+      <p>
+        <strong>Content Updates:</strong> New videos and images are added every couple of weeks as our research progresses and events occur.
+      </p>
+      <p>
+        For more information about our work or to collaborate with us, please <a href="/contact/">get in touch</a>.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript for filtering -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const videoItems = document.querySelectorAll('.video-item');
+    const imageItems = document.querySelectorAll('.image-item');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const category = this.getAttribute('data-category');
+            
+            // Filter videos
+            videoItems.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Filter images
+            imageItems.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
