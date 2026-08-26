@@ -2,7 +2,7 @@
 upcoming:
   # Session 5 – May 20, 2026
   - date: "2026-05-20"
-    time: "1:00 PM - 2:00 PM"
+    time: "12:00 PM - 1:00 PM"
     title: "Advancing Imaging in Marmosets: Light Sheet Microscopy Approaches"
     presenter: "Jesleen Saini"
     affiliation: "Western University"
@@ -10,7 +10,7 @@ upcoming:
     registration_required: true
 
   - date: "2026-05-20"
-    time: "1:00 PM - 2:00 PM"
+    time: "12:00 PM - 1:00 PM"
     title: "Light Sheet Artifact Reduction and Removal"
     presenter: "Wenyao Xia"
     affiliation: "Western University"
