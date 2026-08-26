@@ -1,10 +1,10 @@
 # General seminar information
 series_title: "MIND Monthly Lunch Series"
 description: "A monthly lunch meeting series for users of Light Sheet Microscopy 🔬 and MRI 🧠 — a chance to connect, learn, and discuss the latest in imaging, over pizza 🍕!"
-schedule: "Bi-monthly on the third Tuesday, 1-2 PM"
-location:
-  in_person: "Fisher room - 2nd floor, Robarts Research Institute (RRI)"
-signup_form: "https://forms.gle/zTXWUaFQeeJ44HNc6"
+schedule: "Bi-monthly on the third Wednesday, 12-1 PM"
+location: "in_person and virtual" 
+In-person: Fisher room - 2nd floor, Robarts Research Institute (RRI)
+signup_form: "https://forms.gle/NCV3Ba3Q9JTKnGmz9"
 agenda:
   - duration: "20 min"
     description: "Lightsheet presentation 🔬"
